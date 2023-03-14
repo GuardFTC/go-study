@@ -70,8 +70,11 @@ func processControlStudy() {
 // 方法学习
 func functionStudy() {
 
+	//获取函数类型
+	//function.GetFuncType()
+
 	//简单函数应用
-	function.TestMax()
+	//function.TestMax()
 
 	//defer应用
 	//function.TestDefer()
@@ -84,5 +87,5 @@ func functionStudy() {
 	//function.TestParamMethod()
 
 	//闭包函数调用
-	//function.TestClosure()
+	function.TestClosure()
 }

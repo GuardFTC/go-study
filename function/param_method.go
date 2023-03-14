@@ -7,7 +7,7 @@ func TestParamMethod() {
 	addCAndMinAB(1, 2, 3, getMin)
 }
 
-// 获取a,b最小值与c相加
+// 基于f对a,b进行操作，并将结果与c相加
 func addCAndMinAB(a int, b int, c int, f func(int, int) int) {
 
 	//1.获取a,b最小值

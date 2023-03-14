@@ -39,7 +39,7 @@ func TestClosure() {
 	//4.应用闭包-跟踪函数进程
 	where := func() {
 		_, file, line, _ := runtime.Caller(1)
-		log.Printf("%s:%d", file, line)
+		log.Printf("%s", file, line)
 	}
 	where()
 	where()
