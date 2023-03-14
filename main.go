@@ -1,9 +1,7 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import (
-	"go-study/process_control"
-)
+import "go-study/function"
 
 func main() {
 
@@ -12,6 +10,9 @@ func main() {
 
 	//流程控制学习
 	processControlStudy()
+
+	//方法学习
+	functionStudy()
 }
 
 // 变量类型学习
@@ -63,5 +64,25 @@ func processControlStudy() {
 	//process_control.SwitchCase()
 
 	//for循环流程控制
-	process_control.For()
+	//process_control.For()
+}
+
+// 方法学习
+func functionStudy() {
+
+	//简单函数应用
+	function.TestMax()
+
+	//defer应用
+	//function.TestDefer()
+
+	//递归应用
+	//function.Recurse(1)
+
+	//函数参数应用
+	//fmt.Printf("the first digit index in %s is %d\n", "ftc3", strings.IndexFunc("ftc3", unicode.IsDigit))
+	//function.TestParamMethod()
+
+	//闭包函数调用
+	//function.TestClosure()
 }
