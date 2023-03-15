@@ -1,7 +1,7 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import "go-study/function"
+import "go-study/slice"
 
 func main() {
 
@@ -13,6 +13,9 @@ func main() {
 
 	//方法学习
 	functionStudy()
+
+	//切片学习
+	sliceStudy()
 }
 
 // 变量类型学习
@@ -87,5 +90,12 @@ func functionStudy() {
 	//function.TestParamMethod()
 
 	//闭包函数调用
-	function.TestClosure()
+	//function.TestClosure()
+}
+
+// 切片学习
+func sliceStudy() {
+
+	//array学习
+	slice.CreatArray()
 }
