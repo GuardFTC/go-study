@@ -20,6 +20,7 @@ func main() {
 
 // 变量类型学习
 func dataTypeStudy() {
+
 	//打印常量
 	//datatype.PrintConstant()
 
@@ -98,4 +99,19 @@ func sliceStudy() {
 
 	//array学习
 	slice.CreatArray()
+
+	//array内存分析
+	//slice.MemoryArray()
+
+	//slice简单学习
+	//slice.CreateSlice()
+
+	//slice的Append操作
+	//slice.UseAppend()
+
+	//slice的内存分析
+	//slice.MemorySlice()
+
+	//slice的扩容机制
+	//slice.EnlargeSlice()
 }

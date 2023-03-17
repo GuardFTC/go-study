@@ -16,14 +16,14 @@ func PrintPointer() {
 	var ptr *int
 
 	//输出指针的内存地址
-	fmt.Printf("the location of ptr(%v) in memory is %v\n", ptr, &ptr)
+	fmt.Printf("the location of ptr(%p) in memory is %p\n", ptr, &ptr)
 
 	//输出指针的值，因为指针为空，因此会报错：panic: runtime error: invalid memory address or nil pointer dereference
 	//fmt.Printf("ptr's value is %v\n", *ptr)
 
 	//ptr指向number
 	ptr = &number
-	fmt.Printf("the location of ptr(%v) in memory is %v\n", ptr, &ptr)
+	fmt.Printf("the location of ptr(%p) in memory is %p\n", ptr, &ptr)
 
 	//输出指针的值
 	fmt.Printf("ptr's value is %v\n", *ptr)
