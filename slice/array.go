@@ -1,7 +1,9 @@
 // Package slice @Author:冯铁城 [17615007230@163.com] 2023-03-15 14:58:48
 package slice
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // CreatArray 创建普通数组
 func CreatArray() {

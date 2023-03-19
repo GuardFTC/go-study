@@ -104,16 +104,26 @@ func UseAppend() {
 	slice = append(slice, 1, 2, 3)
 	printSlice(slice)
 
-	//3.移除第2个元素
+	//3.向数组中添加切片
+	newSlice := []int{4, 5, 6}
+	slice = append(slice, newSlice...)
+	printSlice(slice)
+
+	//4.移除第2个元素
 	slice = append(slice[:1], slice[2:]...)
 	printSlice(slice)
 
-	//4.在第二个位置append一个新的切片/元素
-	newSlice := []int{30, 23, 35, 11}
+	//5.在第二个位置append一个新的元素,7
+	newSlice = []int{7}
 	slice = append(slice[:1], append(newSlice, slice[1:]...)...)
 	printSlice(slice)
 
-	//5.取出位于切片的最末尾元素
+	//6.在第二个位置append一个新的切片/元素
+	newSlice = []int{30, 23, 35, 11}
+	slice = append(slice[:1], append(newSlice, slice[1:]...)...)
+	printSlice(slice)
+
+	//7.取出位于切片的最末尾元素
 	endItem := slice[len(slice)-1:][0]
 	fmt.Printf("the end item is %d", endItem)
 }

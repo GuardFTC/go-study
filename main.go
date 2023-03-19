@@ -98,7 +98,7 @@ func functionStudy() {
 func sliceStudy() {
 
 	//array学习
-	slice.CreatArray()
+	//slice.CreatArray()
 
 	//array内存分析
 	//slice.MemoryArray()
@@ -107,7 +107,7 @@ func sliceStudy() {
 	//slice.CreateSlice()
 
 	//slice的Append操作
-	//slice.UseAppend()
+	slice.UseAppend()
 
 	//slice的内存分析
 	//slice.MemorySlice()
