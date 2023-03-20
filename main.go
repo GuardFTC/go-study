@@ -1,8 +1,6 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import "go-study/slice"
-
 func main() {
 
 	//变量类型学习
@@ -107,7 +105,7 @@ func sliceStudy() {
 	//slice.CreateSlice()
 
 	//slice的Append操作
-	slice.UseAppend()
+	//slice.UseAppend()
 
 	//slice的内存分析
 	//slice.MemorySlice()
