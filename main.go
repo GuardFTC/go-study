@@ -1,6 +1,8 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
+import "go-study/map_study"
+
 func main() {
 
 	//变量类型学习
@@ -14,6 +16,9 @@ func main() {
 
 	//切片学习
 	sliceStudy()
+
+	//map学习
+	mapStudy()
 }
 
 // 变量类型学习
@@ -112,4 +117,11 @@ func sliceStudy() {
 
 	//slice的扩容机制
 	//slice.EnlargeSlice()
+}
+
+// map学习
+func mapStudy() {
+
+	//创建map
+	map_study.CreateMap()
 }
