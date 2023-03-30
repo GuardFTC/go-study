@@ -1,7 +1,7 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import "go-study/map_study"
+import _struct "go-study/struct"
 
 func main() {
 
@@ -19,6 +19,9 @@ func main() {
 
 	//map学习
 	mapStudy()
+
+	//结构体学习
+	structStudy()
 }
 
 // 变量类型学习
@@ -123,5 +126,24 @@ func sliceStudy() {
 func mapStudy() {
 
 	//创建map
-	map_study.CreateMap()
+	//map_study.CreateMap()
+}
+
+// 结构体学习
+func structStudy() {
+
+	//创建结构体
+	//_struct.CreateStruct()
+
+	//结构体内存分析
+	//_struct.StructMemory()
+
+	//结构体标签操作
+	//_struct.StructTag()
+
+	//内嵌结构体
+	_struct.AmbiguousStruct()
+
+	//结构体方法
+	//_struct.TestFunction()
 }
