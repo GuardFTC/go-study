@@ -1,7 +1,11 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import _struct "go-study/struct"
+import (
+	"fmt"
+
+	_struct "go-study/struct"
+)
 
 func main() {
 
@@ -22,6 +26,22 @@ func main() {
 
 	//结构体学习
 	structStudy()
+
+	type A struct{ a int }
+	type B struct {
+		a int
+		b int
+	}
+	type C struct {
+		A
+		B
+		b int
+	}
+	var c C
+
+	c.b = 11
+	c.B.b = 12
+	fmt.Printf("%v", c)
 }
 
 // 变量类型学习
