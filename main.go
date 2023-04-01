@@ -1,7 +1,7 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import _struct "go-study/struct"
+import _interface "go-study/interface"
 
 func main() {
 
@@ -22,6 +22,9 @@ func main() {
 
 	//结构体学习
 	structStudy()
+
+	//接口学习
+	interfaceStudy()
 }
 
 // 变量类型学习
@@ -145,5 +148,12 @@ func structStudy() {
 	//_struct.AmbiguousStruct()
 
 	//结构体方法
-	_struct.TestFunction()
+	//_struct.TestFunction()
+}
+
+// 接口学习
+func interfaceStudy() {
+
+	//接口的基础使用
+	_interface.UseInterface()
 }
