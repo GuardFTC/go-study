@@ -102,3 +102,7 @@ func (p person) renameAndIntroduce() {
 func (p person) String() string {
 	return "[" + p.name + "]"
 }
+
+func CreatePerson(name string) *person {
+	return &person{name: name}
+}
