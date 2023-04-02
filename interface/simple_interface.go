@@ -27,12 +27,33 @@ func UseInterface() {
 		m.speak()
 		m.childbirth()
 	}
+}
 
-	//7.验证a的类型,类型验证不一定每次都会成功,所以通过ok表达式的形式来确保准确性
+// InterfaceAssertCheck 接口类型断言检查
+func InterfaceAssertCheck() {
+
+	//1.创建一个animal接口类型变量
+	var a animal
+	a = new(mouse)
+
+	//2.类型断言,验证a的类型,类型验证不一定每次都会成功,所以通过ok表达式的形式来确保准确性
 	if t, ok := a.(*tiger); ok {
-		fmt.Printf("the a's type is %T", t)
+		fmt.Printf("the a's type is %T\n", t)
 	} else {
-		fmt.Printf("the a's type is not *tiger")
+		fmt.Printf("the a's type is not *tiger\n")
+	}
+
+	//3.通过switch-case验证类型,type-switch不允许有fallthrough
+	switch t := a.(type) {
+	case *tiger:
+		fmt.Printf("a's type is tiger:[%T]\n", t)
+		break
+	case *mouse:
+		fmt.Printf("a's type is month:[%T]\n", t)
+		break
+	default:
+		fmt.Printf("unknown type")
+		break
 	}
 }
 

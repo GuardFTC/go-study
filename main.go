@@ -155,5 +155,17 @@ func structStudy() {
 func interfaceStudy() {
 
 	//接口的基础使用
-	_interface.UseInterface()
+	//_interface.UseInterface()
+
+	//接口类型断言
+	//_interface.InterfaceAssertCheck()
+
+	//空接口
+	//_interface.EmptyInterface()
+
+	//反射
+	_interface.Ref()
+
+	//结构体反射
+	//_interface.StructRef()
 }
