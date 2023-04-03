@@ -55,6 +55,24 @@ func InterfaceAssertCheck() {
 		fmt.Printf("unknown type")
 		break
 	}
+
+	//4.判定变量是否实现了某个接口，需要先将该变量声明为空接口,只有接口类型变量才可以进行类型断言检测
+	var obj interface{}
+	obj = new(chicken)
+
+	//4.1 判定是否实现了animal接口
+	if a, ok := obj.(animal); ok {
+		a.speak()
+	} else {
+		fmt.Printf("obj not implement animal interface")
+	}
+
+	//4.2 判定是否实现了mammal接口
+	if m, ok := obj.(mammal); ok {
+		m.childbirth()
+	} else {
+		fmt.Printf("obj not implement mammal interface")
+	}
 }
 
 // 定义动物接口
@@ -100,4 +118,13 @@ func (m *mouse) speak() {
 // 实现mammal接口的childbirth方法
 func (m *mouse) childbirth() {
 	fmt.Println("生了一堆小耗子")
+}
+
+// 定义鸡结构体
+type chicken struct {
+}
+
+// 定义speak方法
+func (c *chicken) speak() {
+	fmt.Println("咯咯咯~~~~~~~")
 }

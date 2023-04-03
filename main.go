@@ -1,7 +1,7 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import _interface "go-study/interface"
+import "go-study/interface/test"
 
 func main() {
 
@@ -164,8 +164,11 @@ func interfaceStudy() {
 	//_interface.EmptyInterface()
 
 	//反射
-	_interface.Ref()
+	//_interface.Ref()
 
 	//结构体反射
 	//_interface.StructRef()
+
+	//自定义场景测试
+	test.Gaming()
 }
