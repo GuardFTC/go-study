@@ -70,10 +70,10 @@ func StructRef() {
 	//2.通过反射获取结构体变量字段类型相关，以及字段值
 	t := reflect.TypeOf(refStruct)
 	v := reflect.ValueOf(refStruct)
-	for i := 0; i < t.NumField(); i++ {
+	for i := 0; i < v.NumField(); i++ {
 		field := t.Field(i)
 		fieldValue := v.Field(i)
-		fmt.Printf("the field name is %v, value is %v\n", field.Name, fieldValue.String())
+		fmt.Printf("the field name is %v, type is %v, value is %v\n", field.Name, field.Type, fieldValue.String())
 	}
 
 	//3.通过反射修改结构体变量字段，只能修改导出字段（首字母大写字段）

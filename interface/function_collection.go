@@ -39,7 +39,7 @@ func main() {
 	// compiler error:
 	// cannot use lst (type List) as type appender in argument to CountInto:
 	//       List does not implement appender (Append method has pointer receiver)
-	//CountInto(lst, 1, 10)
+	//countInto(lst, 1, 10)
 	if longEnough(lst) { // VALID:Identical receiver type
 		fmt.Printf("- lst is long enough\n")
 	}
