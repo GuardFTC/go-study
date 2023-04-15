@@ -1,7 +1,11 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import _interface "go-study/interface"
+import (
+	"fmt"
+
+	"go-study/_error"
+)
 
 func main() {
 
@@ -25,6 +29,9 @@ func main() {
 
 	//接口学习
 	interfaceStudy()
+
+	//异常学习
+	errorStudy()
 }
 
 // 变量类型学习
@@ -167,8 +174,37 @@ func interfaceStudy() {
 	//_interface.Ref()
 
 	//结构体反射
-	_interface.StructRef()
+	//_interface.StructRef()
 
 	//自定义场景测试
 	//test.Gaming()
+}
+
+// 异常处理学习
+func errorStudy() {
+
+	//异常的简单使用
+	//_error.SimpleError()
+
+	//panic ok
+	//_error.PanicAndRecoverAndDefer(1)
+
+	//panic error
+	//_error.PanicAndRecoverAndDefer(0)
+
+	//error and panic ok
+	//res, err := _error.PanicAndError(1)
+	//if err != nil {
+	//	fmt.Println(err.Error())
+	//} else {
+	//	fmt.Println(res)
+	//}
+
+	//error and panic error
+	res, err := _error.PanicAndError(-1)
+	if err != nil {
+		fmt.Println(err.Error())
+	} else {
+		fmt.Println(res)
+	}
 }
