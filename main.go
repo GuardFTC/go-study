@@ -1,11 +1,7 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import (
-	"fmt"
-
-	"go-study/_error"
-)
+import "go-study/_goroutine"
 
 func main() {
 
@@ -32,6 +28,9 @@ func main() {
 
 	//异常学习
 	errorStudy()
+
+	//协程学习
+	goroutineStudy()
 }
 
 // 变量类型学习
@@ -201,10 +200,43 @@ func errorStudy() {
 	//}
 
 	//error and panic error
-	res, err := _error.PanicAndError(-1)
-	if err != nil {
-		fmt.Println(err.Error())
-	} else {
-		fmt.Println(res)
-	}
+	//res, err := _error.PanicAndError(-1)
+	//if err != nil {
+	//	fmt.Println(err.Error())
+	//} else {
+	//	fmt.Println(res)
+	//}
+}
+
+// 协程学习
+func goroutineStudy() {
+
+	////1.同步发送数据
+	//_goroutine.TestChannelSync()
+
+	////2.异步发送数据
+	//_goroutine.TestChannelAsync()
+
+	////3.测试信号量用法
+	//_goroutine.TestSignal()
+
+	////4.测试chan工厂模式
+	//_goroutine.TestChanFactory()
+
+	////5.测试只读只写通道
+	//_goroutine.TestReadAndWriteOnly()
+
+	////6.测试关闭通道
+	//_goroutine.TestChannelClose()
+
+	////7.测试select
+	//_goroutine.TestChannelSelect()
+	//_goroutine.TestChannelSelectV2()
+
+	////8.测试timer
+	//_goroutine.TestChannelTimer()
+	//_goroutine.TestTimeout()
+
+	//9.测试惰性生成器
+	_goroutine.TestLazyGenerator()
 }
