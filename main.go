@@ -237,6 +237,15 @@ func goroutineStudy() {
 	//_goroutine.TestChannelTimer()
 	//_goroutine.TestTimeout()
 
-	//9.测试惰性生成器
-	_goroutine.TestLazyGenerator()
+	////9.测试惰性生成器
+	//_goroutine.TestLazyGenerator()
+
+	////10.测试future
+	//_goroutine.TestFuture()
+
+	////11.测试多路复用
+	//_goroutine.TestMultiplex()
+
+	//12.测试链路调用
+	_goroutine.TestChain()
 }
