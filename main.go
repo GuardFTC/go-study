@@ -1,6 +1,8 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
+import "go-study/_goroutine"
+
 func main() {
 
 	//变量类型学习
@@ -212,44 +214,44 @@ func goroutineStudy() {
 	//1.测试go关键字
 	//_goroutine.TryGoroutine()
 
-	////2.同步发送数据
+	//2.同步发送数据
 	//_goroutine.TestChannelSync()
 
-	////3.异步发送数据
+	//3.异步发送数据
 	//_goroutine.TestChannelAsync()
 
-	////4.测试信号量用法
+	//4.测试信号量用法
 	//_goroutine.TestSignal()
 
-	////5.测试chan工厂模式
-	//_goroutine.TestChanFactory()
+	//5.测试chan工厂模式
+	_goroutine.TestChanFactory()
 
-	////6.测试只读只写通道
+	//6.测试只读只写通道
 	//_goroutine.TestReadAndWriteOnly()
 
-	////7.测试关闭通道
+	//7.测试关闭通道
 	//_goroutine.TestChannelClose()
 
-	////8.测试select
+	//8.测试select
 	//_goroutine.TestChannelSelect()
 	//_goroutine.TestChannelSelectV2()
 
-	////9.测试timer
+	//9.测试timer
 	//_goroutine.TestChannelTimer()
 	//_goroutine.TestTimeout()
 
-	////10.测试惰性生成器
+	//10.测试惰性生成器
 	//_goroutine.TestLazyGenerator()
 
-	////11.测试future
+	//11.测试future
 	//_goroutine.TestFuture()
 
-	////12.测试多路复用
+	//12.测试多路复用
 	//_goroutine.TestMultiplex()
 
-	////13.测试链路调用
+	//13.测试链路调用
 	//_goroutine.TestChain()
 
-	////14.测试同步锁
+	//14.测试同步锁
 	//_goroutine.TestSync()
 }

@@ -21,7 +21,7 @@ func TestChannelAsync() {
 	//4.创建接收数据协程
 	go getDataAsync(ch)
 
-	//5.睡1s等待协程执行完成
+	//5.睡3s等待协程执行完成
 	time.Sleep(3 * time.Second)
 }
 

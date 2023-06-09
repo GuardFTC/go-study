@@ -18,14 +18,14 @@ func TestChanFactory() {
 	<-chanGetData
 }
 
-func testChanFactorySendData() chan int {
+func testChanFactorySendData() <-chan int {
 
 	//1.创建通道
 	ch := make(chan int)
 
 	//2.创建协程向通道推送10个数据
 	go func() {
-		for i := 1; i < 10; i++ {
+		for i := 1; i <= 10; i++ {
 			ch <- i * 10
 		}
 	}()
@@ -34,14 +34,14 @@ func testChanFactorySendData() chan int {
 	return ch
 }
 
-func testChanFactoryGetData(ch chan int) chan bool {
+func testChanFactoryGetData(ch <-chan int) chan bool {
 
 	//1.创建通道
 	chBool := make(chan bool)
 
 	//2.创建协程读取参数通道数据，读取完成后向信号量通道推送数据
 	go func() {
-		for i := 1; i < 10; i++ {
+		for i := 1; i <= 10; i++ {
 			fmt.Printf("channel data is %v\n", <-ch)
 		}
 		chBool <- true

@@ -35,11 +35,11 @@ func TestTimeout() {
 	channel := make(chan bool, 1)
 	defer close(channel)
 
-	//2.创建一次性秒表，延迟1s
-	after := time.After(1 * time.Second)
+	//2.创建一次性秒表，延迟3s
+	after := time.After(3 * time.Second)
 
-	//3.创建协程发送数据
-	go sendDataTimeout(channel)
+	//3.模拟从数据库读取数据，阻塞时间为5s
+	go getDataFromDatabase(channel)
 
 	//4.开始监听
 	for {
@@ -55,10 +55,11 @@ func TestTimeout() {
 L:
 }
 
-func sendDataTimeout(ch chan bool) {
+// 模拟从数据库读取数据
+func getDataFromDatabase(ch chan bool) {
 
-	//1.睡2s
-	time.Sleep(2 * time.Second)
+	//1.睡5s
+	time.Sleep(5 * time.Second)
 
 	//2.向通道发送数据
 	ch <- true
