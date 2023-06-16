@@ -1,8 +1,6 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import "go-study/_goroutine"
-
 func main() {
 
 	//变量类型学习
@@ -224,7 +222,7 @@ func goroutineStudy() {
 	//_goroutine.TestSignal()
 
 	//5.测试chan工厂模式
-	_goroutine.TestChanFactory()
+	//_goroutine.TestChanFactory()
 
 	//6.测试只读只写通道
 	//_goroutine.TestReadAndWriteOnly()

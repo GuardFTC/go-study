@@ -26,8 +26,9 @@ func testChanFactorySendData() <-chan int {
 	//2.创建协程向通道推送10个数据
 	go func() {
 		for i := 1; i <= 10; i++ {
-			ch <- i * 10
+			ch <- i * 5
 		}
+		close(ch)
 	}()
 
 	//3.返回通道
@@ -45,6 +46,7 @@ func testChanFactoryGetData(ch <-chan int) chan bool {
 			fmt.Printf("channel data is %v\n", <-ch)
 		}
 		chBool <- true
+		close(chBool)
 	}()
 
 	//3.返回通道

@@ -21,13 +21,13 @@ func TestLazyGenerator() {
 	chanFibonacci = fibonacci()
 
 	//2.循环取值
-	for i := 0; i < 50; i++ {
-		fmt.Println(getDataFromFibonacci())
+	for i := 0; i < 20; i++ {
+		fmt.Printf("%v, ", getDataFromFibonacci())
 	}
 }
 
 // 获取斐波那契数通道
-// 结题思路
+// 解题思路
 // 入队数  暂存数
 // 1        0
 // 1+0=1    1

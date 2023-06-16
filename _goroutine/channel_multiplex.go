@@ -31,10 +31,11 @@ func (s *Server) start() (chan *Request, chan bool) {
 			case req := <-requestsChan:
 				go s.dealRequest(req)
 			case <-serverStatusChan:
-				s.close()
-				return
+				goto L
 			}
 		}
+	L:
+		s.close()
 	}()
 
 	//3.返回通道
@@ -67,7 +68,7 @@ func TestMultiplex() {
 	requestsChan, serverStatusChan := server.start()
 
 	//4.定义请求切片
-	requestNumber := 100
+	requestNumber := 10
 	requests := make([]*Request, requestNumber)
 
 	//5.推入100个请求
