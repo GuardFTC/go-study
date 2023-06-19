@@ -1,7 +1,9 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import "go-study/_goroutine"
+import (
+	"go-study/net"
+)
 
 func main() {
 
@@ -31,6 +33,9 @@ func main() {
 
 	//协程学习
 	goroutineStudy()
+
+	//网络学习
+	netStudy()
 }
 
 // 变量类型学习
@@ -261,5 +266,12 @@ func goroutineStudy() {
 	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakOneListenerOrListenOneTimes)
 	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakMoreSenderOrSendMoreTimes)
 	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakMoreSenderOrSendMoreTimesOk)
-	_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakMoreListenerOrListenMoreTimes)
+	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakMoreListenerOrListenMoreTimes)
+}
+
+// 网络相关学习
+func netStudy() {
+
+	//1.测试HTTP
+	net.StartHttpServer()
 }
