@@ -1,6 +1,8 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
+import "go-study/_goroutine"
+
 func main() {
 
 	//变量类型学习
@@ -252,4 +254,12 @@ func goroutineStudy() {
 
 	//14.测试同步锁
 	//_goroutine.TestSync()
+
+	//15.内存溢出测试
+	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakOneSenderOrSendOneTimes)
+	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakOneSenderOrSendOneTimesOk)
+	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakOneListenerOrListenOneTimes)
+	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakMoreSenderOrSendMoreTimes)
+	//_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakMoreSenderOrSendMoreTimesOk)
+	_goroutine.TestMemoryLeak(_goroutine.TestMemoryLeakMoreListenerOrListenMoreTimes)
 }
