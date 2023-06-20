@@ -1,9 +1,7 @@
 // @Author:冯铁城 [17615007230@163.com] 2023-03-08 18:24:43
 package main
 
-import (
-	"go-study/net"
-)
+import "go-study/net"
 
 func main() {
 
@@ -272,6 +270,12 @@ func goroutineStudy() {
 // 网络相关学习
 func netStudy() {
 
-	//1.测试HTTP
-	net.StartHttpServer()
+	//1.测试HTTP服务器
+	//net.StartHttpServer()
+
+	//2.测试发送Get请求
+	//net.TestGet()
+
+	//3.测试复杂的http服务器
+	net.StartComplexHttpServer()
 }

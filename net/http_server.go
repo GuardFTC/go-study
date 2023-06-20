@@ -5,13 +5,14 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strings"
 )
 
 // StartHttpServer 开启服务器
 func StartHttpServer() {
 
 	//1.指定路由
-	http.HandleFunc("/", httpServer)
+	http.HandleFunc("/api/nets/", httpServer)
 
 	//2.开启服务器并监听
 	err := http.ListenAndServe("127.0.0.1:8080", nil)
@@ -29,5 +30,5 @@ func httpServer(w http.ResponseWriter, req *http.Request) {
 	route := req.URL.Path[1:]
 
 	//2.响应
-	fmt.Fprintf(w, "Hello! "+route)
+	fmt.Fprintf(w, "Hello! "+route[strings.LastIndex(route, "/")+1:])
 }
