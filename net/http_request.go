@@ -24,6 +24,7 @@ func TestGet() {
 
 	//发送GET请求
 	resp, err := http.Get(url)
+
 	if nil != err {
 		fmt.Printf("request err->%v\n", err)
 		return

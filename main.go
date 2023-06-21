@@ -271,11 +271,11 @@ func goroutineStudy() {
 func netStudy() {
 
 	//1.测试HTTP服务器
-	//net.StartHttpServer()
+	net.StartHttpServer()
 
 	//2.测试发送Get请求
 	//net.TestGet()
 
 	//3.测试复杂的http服务器
-	net.StartComplexHttpServer()
+	//net.StartComplexHttpServer()
 }
